@@ -6,8 +6,17 @@
 * time
 * datetime
 
+## Loading data
+Loading data from big .txt file and convert to .csv file
+```python
+with open('triplets_sample_20p.txt', 'r', encoding='utf-8') as rf:
+    with open('tripletsComma.csv', 'w', encoding='utf-8') as wf:
+        for line in rf:
+            cos = ','.join(line.split('<SEP>'))
+            wf.write(cos)
+```
 
-## Usage
+## Create table and insert data
 
 ```python
 import sqlite3
